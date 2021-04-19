@@ -2,8 +2,14 @@ namespace SpriteKind {
     export const Grocery = SpriteKind.create()
     export const CartItem = SpriteKind.create()
 }
-function CreateAllGroceries() {
+function addToCart(){
     
+}
+function createAllGroceries() {
+    for (let index = 0; index < groceryImages.length; index++){
+        createGrocery(groceryImages.get(index), groceryCosts.get(index), groceryWeights.get(index), groceryNames.get(index))
+
+    }
 }
 function createGrocery (gimage: Image, cost: number, weight: number, name: string) {
     g = sprites.create(gimage, SpriteKind.Grocery)
@@ -233,3 +239,4 @@ let player = sprites.create(img`
 controller.moveSprite(player)
 scene.cameraFollowSprite(player)
 tiles.placeOnTile(player, tiles.getTileLocation(1, 3))
+createAllGroceries()
