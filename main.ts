@@ -2,24 +2,64 @@ namespace SpriteKind {
     export const Grocery = SpriteKind.create()
     export const CartItem = SpriteKind.create()
 }
-function addToCart(){
-    
+function createGrocery (gimage: Image, cost: number, weight: number, name: string) {
+    h = sprites.create(gimage, SpriteKind.Grocery)
+    sprites.setDataString(h, "name", name)
+    sprites.setDataNumber(h, "weight", weight)
+    sprites.setDataNumber(h, "cost", cost)
+    tiles.placeOnRandomTile(h, assets.tile`tile1`)
 }
-function createAllGroceries() {
-    for (let index = 0; index < groceryImages.length; index++){
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Grocery, function (sprite, otherSprite) {
+    if (controller.A.isPressed()) {
+        addToCart(otherSprite)
+        pause(100)
+    }
+})
+function createTextSprite () {
+    subtotal_sprite = textsprite.create("$0")
+    subtotal_sprite.top = 0
+    subtotal_sprite.left = 0
+    subtotal_sprite.setFlag(SpriteFlag.RelativeToCamera, true)
+}
+function createAllGroceries () {
+    for (let index = 0; index <= groceryImages.length - 1; index++) {
         createGrocery(groceryImages.get(index), groceryCosts.get(index), groceryWeights.get(index), groceryNames.get(index))
-
     }
 }
-function createGrocery (gimage: Image, cost: number, weight: number, name: string) {
-    g = sprites.create(gimage, SpriteKind.Grocery)
-    sprites.setDataString(g, "name", name)
-    sprites.setDataNumber(g, "weight", weight)
-    sprites.setDataNumber(g, "cost", cost)
-    tiles.placeOnRandomTile(g, assets.tile`tile1`)
+function addToCart (grocery: Sprite) {
+    g = sprites.create(grocery.image, SpriteKind.CartItem)
+    g.follow(player)
+    g.setPosition(player.x, player.y)
+    let cost = sprites.readDataNumber(grocery, "cost")
+    let weight = sprites.readDataNumber(grocery, "weight")
+    subtotal += cost
+    subtotal_sprite.setText("$" + subtotal) 
 }
 let g: Sprite = null
-let groceryImages = [
+let subtotal_sprite: TextSprite = null
+let h: Sprite = null
+let player: Sprite = null
+let groceryImages: Image[] = []
+let subtotal = 0
+groceryImages = [
+img`
+    . . . 2 2 2 . . . . . . . . . . 
+    . . . c c c 6 6 8 8 . . . . . . 
+    . . 6 e e e e e d 6 8 . . . . . 
+    . 6 e e e e e e 8 d 6 8 . . . . 
+    6 e e e e e e 8 . 8 d 8 . . . . 
+    6 e e e e e e 8 . 8 d 8 . . . . 
+    8 d e e e e e 8 . 8 d 8 . . . . 
+    8 d e e e e e 8 8 d d 8 . . . . 
+    8 d d d d d d d d d d 8 . . . . 
+    8 6 d d d d d d d d d 8 . . . . 
+    . 8 6 d d d d d d d 6 8 . . . . 
+    . . 8 8 8 8 8 8 8 8 8 . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `,
 img`
     . . . 2 2 2 . . . . . . . . . . 
     . . . c c c 6 6 8 8 . . . . . . 
@@ -181,9 +221,28 @@ img`
     . 6 6 7 6 7 7 6 7 6 6 7 6 6 . . 
     . . 6 6 6 6 7 6 7 6 6 6 6 . . . 
     . . . . 6 6 6 6 6 6 6 . . . . . 
+    `,
+img`
+    . . . . . . b b b b a a . . . . 
+    . . . . b b d d d 3 3 3 a a . . 
+    . . . b d d d 3 3 3 3 3 3 a a . 
+    . . b d d 3 3 3 3 3 3 3 3 3 a . 
+    . b 3 d 3 3 3 3 3 b 3 3 3 3 a b 
+    . b 3 3 3 3 3 a a 3 3 3 3 3 a b 
+    b 3 3 3 3 3 a a 3 3 3 3 d a 4 b 
+    b 3 3 3 3 b a 3 3 3 3 3 d a 4 b 
+    b 3 3 3 3 3 3 3 3 3 3 d a 4 4 e 
+    a 3 3 3 3 3 3 3 3 3 d a 4 4 4 e 
+    a 3 3 3 3 3 3 3 d d a 4 4 4 e . 
+    a a 3 3 3 d d d a a 4 4 4 e e . 
+    . e a a a a a a 4 4 4 4 e e . . 
+    . . e e b b 4 4 4 4 b e e . . . 
+    . . . e e e e e e e e . . . . . 
+    . . . . . . . . . . . . . . . . 
     `
 ]
 let groceryNames = [
+"Chocolate Milk",
 "Milk",
 "Grape Soda",
 "Oatmeal",
@@ -192,9 +251,11 @@ let groceryNames = [
 "Chicken soup",
 "Sardines",
 "Flour",
-"Watermelon"
+"Watermelon",
+"Donut"
 ]
 let groceryWeights = [
+2,
 8,
 2,
 1,
@@ -203,9 +264,11 @@ let groceryWeights = [
 0.5,
 0.5,
 5,
-10
+10,
+0.5
 ]
 let groceryCosts = [
+30,
 2,
 3,
 4,
@@ -214,11 +277,12 @@ let groceryCosts = [
 2,
 1,
 5,
-3
+3,
+25
 ]
 scene.setBackgroundColor(9)
 tiles.setTilemap(tilemap`level`)
-let player = sprites.create(img`
+player = sprites.create(img`
     fffffff......................
     f.fffcd......................
     ..ffddc......................
@@ -240,3 +304,4 @@ controller.moveSprite(player)
 scene.cameraFollowSprite(player)
 tiles.placeOnTile(player, tiles.getTileLocation(1, 3))
 createAllGroceries()
+createTextSprite()

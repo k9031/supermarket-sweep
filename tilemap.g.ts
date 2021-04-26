@@ -22,11 +22,19 @@ namespace myTiles {
     export const tile9 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile10 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile11 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile15 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile17 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile18 = image.ofBuffer(hex``);
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "level":
-            case "level":return tiles.createTilemap(hex`100008000003020202020202020202020204000700010101010101010101010101010009080000000000000000000000000000070800000000000000000000000000000908000000000000000000000000000007080000000000000000000000000000090001010101010101010101010101000700050202020202020202020202060009`, img`
+            case "level":return tiles.createTilemap(hex`1000080000030202020c0d02020202020204000700010101010101010101010101010009080000000000000000000000000000070800000000000000000000000000000908000000000000000000000000000007080000000000000000000000000000090001010101010101010101010101000700050202020202020202020202060009`, img`
 . 2 2 2 2 2 2 2 2 2 2 2 2 2 . 2 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . 2 
@@ -35,7 +43,7 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . 2 
 . 2 2 2 2 2 2 2 2 2 2 2 2 2 . . 
-`, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile10], TileScale.Sixteen);
+`, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile10,myTiles.tile11,myTiles.tile15,myTiles.tile17,myTiles.tile18], TileScale.Sixteen);
         }
         return null;
     })
@@ -53,6 +61,14 @@ namespace myTiles {
             case "tile8":return tile8;
             case "tile9":return tile9;
             case "tile10":return tile10;
+            case "myTile":
+            case "tile11":return tile11;
+            case "myTile3":
+            case "tile15":return tile15;
+            case "myTile4":
+            case "tile17":return tile17;
+            case "myTile5":
+            case "tile18":return tile18;
         }
         return null;
     })
