@@ -43,23 +43,27 @@ let groceryImages: Image[] = []
 let subtotal = 0
 groceryImages = [
 img`
-    . . . 2 2 2 . . . . . . . . . . 
-    . . . c c c 6 6 8 8 . . . . . . 
-    . . 6 e e e e e d 6 8 . . . . . 
-    . 6 e e e e e e 8 d 6 8 . . . . 
-    6 e e e e e e 8 . 8 d 8 . . . . 
-    6 e e e e e e 8 . 8 d 8 . . . . 
-    8 d e e e e e 8 . 8 d 8 . . . . 
-    8 d e e e e e 8 8 d d 8 . . . . 
-    8 d d d d d d d d d d 8 . . . . 
-    8 6 d d d d d d d d d 8 . . . . 
-    . 8 6 d d d d d d d 6 8 . . . . 
-    . . 8 8 8 8 8 8 8 8 8 . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `,
+    eeeeeeeeeeeeeeeeeeee
+    eddddddddd222222222e
+    edddddddd2221111112e
+    e55555555d222222222e
+    e511111555d77777777e
+    e55555555d777777777e
+    eeeeeeeeeeeeeeeeeeee
+    e77d77d77d77d77d777e
+    e77d77d77d77d77d777e
+    e222222222222222222e
+    e212121212121212121e
+    e222222222222222222e
+    eeeeeeeeeeeeeeeeeeee
+    edddddddddddddddddde
+    edeeeedddddddeeeeede
+    edeeeedddddddeeeeede
+    edeeeedddddddeeeeede
+    edeeeedddddddeeeeede
+    edddddddddddddddddde
+    eeeeeeeeeeeeeeeeeeee
+`,
 img`
     . . . 2 2 2 . . . . . . . . . . 
     . . . c c c 6 6 8 8 . . . . . . 
@@ -242,7 +246,7 @@ img`
     `
 ]
 let groceryNames = [
-"Chocolate Milk",
+"Make your own Burger",
 "Milk",
 "Grape Soda",
 "Oatmeal",
@@ -255,7 +259,7 @@ let groceryNames = [
 "Donut"
 ]
 let groceryWeights = [
-2,
+15,
 8,
 2,
 1,

@@ -78,10 +78,36 @@
         "tilemapTile": true,
         "displayName": "myTile5"
     },
+    "tile12": {
+        "data": "hwQQABAAAADu7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u6e7u7u7u7pmZ6e7u7u7u6enu7u7u7u7p7u7u7u7u7u6Z6e7u7u7u7unp7u7u7u7umenu7u7u7u7u7u7u7u7u7pnp7u7u7u7u6enu7u7u7u6Z6e7u7u7u7u7u7u7u7u7umenu7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile0"
+    },
+    "tile13": {
+        "data": "hwQQABAAAADu7u7u6enu7u7u7pmZ6e7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7unpnu7u7u7u6enu7u7u7u7p6Z7u7u7u7u7p7u7u7u7u7u7u7u7u7u7umZ7u7u7u7u7u6e7u7u7u6emZ7u7u7u7p6eme7u7u7unu7u7u7u7u7u7u7u7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile14": {
+        "data": "hwQQABAAAADu7u7u7u7u7u7u7u7u7u7u7u6emZnp7u7u7u7u7u7u7u7u7u7u7u7u7u7umZnp7u7u7u7p6enu7u7u7unp6e7u7u7umenu7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile1"
+    },
+    "level1": {
+        "id": "level1",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16"
+        ],
+        "displayName": "level1"
+    },
     "level": {
         "id": "level",
         "mimeType": "application/mkcd-tilemap",
-        "data": "MTAxMDAwMDgwMDAwMDMwMjAyMDIwYzBkMDIwMjAyMDIwMjAyMDQwMDA3MDAwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAwMDkwODAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwNzA4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA5MDgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDcwODAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwOTAwMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMDA3MDAwNTAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwNjAwMDkyMDIyMjIyMjIyMjIyMjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDIwMjAyMjIyMjIyMjIyMjIwMA==",
+        "data": "MTAxMDAwMDgwMDBmMDMwMjAyMDIwOTBhMGIwYzBkMDIwMjAyMDQwZjA3MGYwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTBmMDgwZTBmMGYwZjBmMGYwZjBmMGYwZjBmMGYwZjBmMGYwNzBlMGYwZjBmMGYwZjBmMGYwZjBmMGYwZjBmMGYwZjA4MGUwZjBmMGYwZjBmMGYwZjBmMGYwZjBmMGYwZjBmMDcwZTBmMGYwZjBmMGYwZjBmMGYwZjBmMGYwZjBmMGYwODBmMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwZjA3MGYwNTAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwNjBmMDgyMDIyMjIyMjIyMjIyMjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDIwMjAyMjIyMjIyMjIyMjIwMA==",
         "tileset": [
             "myTiles.transparency16",
             "myTiles.tile1",
@@ -91,12 +117,14 @@
             "myTiles.tile5",
             "myTiles.tile6",
             "myTiles.tile7",
-            "myTiles.tile8",
             "myTiles.tile10",
-            "myTiles.tile11",
-            "myTiles.tile15",
             "myTiles.tile17",
-            "myTiles.tile18"
+            "myTiles.tile18",
+            "myTiles.tile12",
+            "myTiles.tile13",
+            "myTiles.tile14",
+            "sprites.dungeon.darkGroundCenter",
+            "sprites.dungeon.collectibleInsignia"
         ],
         "displayName": "level"
     },
